@@ -10,7 +10,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="relative w-full h-50">
+      <div className="relative w-full h-30 overflow mb-5 md:mb-27">
         <PinkPatch className="hidden lg:block absolute -top-6 -right-15 -rotate-10" />
         <PinkPatch className="hidden lg:block absolute -bottom-6 -left-20 -rotate-20" />
 
@@ -47,7 +47,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block border-3 mt-7"></div>
+        <div className="hidden lg:block border-3 mt-8" ></div>
       </div>
     </>
   );
