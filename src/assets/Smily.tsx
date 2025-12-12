@@ -1,4 +1,4 @@
-const Smily = () => {
+const Smily = ({className}: {className?: string}) => {
   return (  
     <svg
       width="39"
@@ -6,6 +6,7 @@ const Smily = () => {
       viewBox="0 0 73 69"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={className}
     >
       <path
         d="M38.6182 8.36637C36.8543 11.1818 39.3811 19.2499 42.9487 22.2228C45.6853 24.4461 47.71 23.4265 48.2431 19.5231C48.8556 15.409 45.8411 9.56867 42.4097 8.10076C39.795 6.95345 39.4803 7.01133 38.6182 8.36637Z"

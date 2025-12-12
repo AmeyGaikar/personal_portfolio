@@ -1,5 +1,5 @@
 interface classNameProps {
-  className: string
+  className?: string
 }
 
 const PinkPatch = ({className} : classNameProps) => {

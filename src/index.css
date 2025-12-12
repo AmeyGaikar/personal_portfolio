@@ -8,10 +8,70 @@
 
   body {
     background-color: #fefff0;
-    overflow-x: hidden
+    overflow-x: hidden;
   }
 }
 
 .navBtn {
   @apply text-2xl font-medium px-3;
+}
+
+.title {
+  @apply font-bold text-3xl;
+}
+
+.subtitle {
+  @apply text-xl font-medium;
+}
+
+.spanTwo {
+  @apply border-3 border-b-0 p-5 row-span-2 flex flex-col justify-center;
+}
+
+.spanFour {
+  @apply border-3 border-b-0 p-5 row-span-4 flex flex-col justify-center gap-3;
+}
+
+.spanOne {
+  @apply border-3 border-b-0 p-5 row-span-1 text-2xl font-medium;
+}
+
+.tenthDiv {
+  @apply border-3 px-3 py-6 md:py-1 text-2xl md:col-span-2 md:row-start-6 md:col-start-5 md:border-l-0 font-semibold flex items-center;
+}
+
+.ninthDiv {
+  @apply border-3 border-b-0 flex flex-col gap-3 px-3 py-10 md:py-3 md:col-span-2 md:row-span-2 md:col-start-5 md:row-start-4 md:border-l-0;
+}
+
+.eightDiv {
+  @apply border-3 border-b-0 flex items-center gap-3 px-3 py-6 md:py-1 text-2xl md:col-span-2 md:col-start-3 md:row-start-6 md:border-l-0 font-semibold;
+}
+
+.seventhDiv {
+  @apply border-3 border-b-0 flex flex-col gap-3 px-3 py-10 md:py-3 md:col-span-2 md:row-span-2 md:row-start-4 md:col-start-3 md:border-l-0;
+}
+
+.sixthDiv {
+  @apply border-3 border-b-0 flex items-center gap-3 px-3 py-6 md:py-1 text-2xl md:col-span-2 md:col-start-5 md:row-start-3 md:border-l-0 font-semibold 
+}
+
+.fifthDiv{
+  @apply border-3 border-b-0 flex flex-col gap-3 px-3 py-10 md:col-span-2 md:col-start-5 md:row-span-2 md:row-start-1 md:border-l-0
+}
+
+.fourthDiv {
+  @apply border-3 border-b-0 flex items-center gap-3 px-3 py-6 md:py-1  text-2xl md:col-span-2 md:col-start-3 md:row-start-3 md:border-l-0 font-semibold
+}
+
+.thirdDiv {
+  @apply border-3 border-b-0 flex flex-col gap-3 px-3 py-10  md:col-span-2 md:col-start-3 md:row-start-1 md:row-span-2 md:border-l-0
+}
+
+.secondDiv {
+  @apply border-3 border-b-0 flex flex-col gap-3 px-3 py-6 md:col-span-2 md:row-span-5 md:col-start-1 md:row-start-2 md:border-l-0
+}
+
+.firstDiv {
+  @apply border-3 border-b-0 flex flex-col gap-3 px-3 py-6 md:col-span-2 md:border-l-0
 }
