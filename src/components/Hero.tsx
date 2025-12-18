@@ -2,6 +2,7 @@ import Arrow from "../assets/Arrow";
 import PinkPatch from "../assets/Pink_Patch";
 import Smily from "../assets/Smily";
 import PinkSmily from "../assets/PinkSmily";
+import FancyButton from "../props/FancyButton";
 
 const Hero = () => {
   return (
@@ -16,34 +17,9 @@ const Hero = () => {
               <p className="text-4xl md:text-5xl lg:text-7xl font-semibold text-left">
                 I design ✍️ top notch websites
               </p>
-              <div className="relative">
-                <button className=" bg-[#BAE6FF] p-2 border-4 rounded-full font-semibold">
-                  see portfolio
-                </button>
-                {/* black spark */}
-                <div className=" absolute left-25 top-8 rotate-20">
-                  <svg
-                    width="41"
-                    height="48"
-                    viewBox="0 0 41 48"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M32.0916 7.44044C31.7787 6.96129 28.9816 6.55866 25.7762 6.46473C20.791 6.33436 19.9491 6.52661 19.6538 7.53966C18.8092 10.0786 19.9808 10.6489 25.8079 10.5871C32.1267 10.4248 33.7185 9.69028 32.0916 7.44044Z"
-                      fill="black"
-                    />
-                    <path
-                      d="M22.7865 22.7438C16.6443 18.7002 14.7599 18.1011 14.8946 20.3686C14.9494 21.2897 17.0471 23.0849 21.1919 25.8251C24.6696 28.1071 27.6926 29.9185 28.0469 29.8974C28.3303 29.8806 28.5674 29.0843 28.5127 28.1632C28.4369 26.8878 27.0064 25.5506 22.7865 22.7438Z"
-                      fill="black"
-                    />
-                    <path
-                      d="M15.1654 35.1628C11.9403 29.9504 8.11531 25.4136 7.36537 25.9559C6.06962 26.8862 6.83787 29.0448 10.1542 33.3986C11.9355 35.8526 13.867 38.4398 14.4135 39.2606C14.96 40.0814 15.6398 40.7521 15.9941 40.731C17.4821 40.6426 17.1306 38.317 15.1654 35.1628Z"
-                      fill="black"
-                    />
-                  </svg>
-                </div>
-              </div>
+              <FancyButton>
+                See portfolio
+              </FancyButton>
             </div>
           </div>
 

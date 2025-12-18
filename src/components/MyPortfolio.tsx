@@ -29,7 +29,7 @@ const MyPortfolio = () => {
         <BlueSmilyPatch />
         <LineStroke className="absolute bottom-3 right-17 md:right-24.5 md:size-62 md:-bottom-30" />
       </div>
-      <div className="grid grid-cols-1 auto-rows-min px-10 gap-3 md:grid-cols-2">
+      <div className="grid grid-cols-1 auto-rows-min px-10 gap-3 md:grid-cols-2 mb-20 ">
         {portFolio.map((p) => {
           return (
             <div

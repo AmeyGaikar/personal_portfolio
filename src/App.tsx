@@ -3,6 +3,7 @@ import MyPortfolio from "./components/MyPortfolio";
 import Navbar from "./components/Navbar";
 import ServicesSection from "./components/ServicesSection";
 import SkillsStrip from "./components/SkillsStrip";
+import WorkWithUs from "./components/WorkWithUs";
 
 const App = () => {
   return (
@@ -12,9 +13,9 @@ const App = () => {
       <SkillsStrip />
       <ServicesSection />
       <MyPortfolio />
+      <WorkWithUs />
     </>
   );
 };
 
 export default App;
-  
