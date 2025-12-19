@@ -1,3 +1,4 @@
+import Footer from "./components/Footer";
 import Hero from "./components/Hero";
 import MyPortfolio from "./components/MyPortfolio";
 import Navbar from "./components/Navbar";
@@ -14,6 +15,7 @@ const App = () => {
       <ServicesSection />
       <MyPortfolio />
       <WorkWithUs />
+      <Footer />
     </>
   );
 };
