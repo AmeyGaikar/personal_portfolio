@@ -1,5 +1,8 @@
 import Vector from "../assets/Vector";
 import PinkPatch from "../assets/Pink_Patch";
+import { useState } from "react";
+import { twMerge } from "tailwind-merge";
+import { AnimatePresence, motion } from "motion/react";
 
 const Navbar = () => {
   const navLinks = [
@@ -8,28 +11,91 @@ const Navbar = () => {
     { label: "Hire me", href: "#" },
   ];
 
+  const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="relative w-full h-30 overflow mb-5 md:mb-27">
+      <div className="relative w-full md:mb-27 ">
         <PinkPatch className="hidden lg:block absolute -top-6 -right-15 -rotate-10" />
         <PinkPatch className="hidden lg:block absolute -bottom-6 -left-20 -rotate-20" />
 
         <div className="flex justify-center">
-          <div className="border-4 my-5 bg-white w-80 lg:w-150 h-18 shadow-[8px_8px_0_#989990]">
+          <div className="border-4 my-5 bg-white w-80 lg:w-150 h-auto shadow-[8px_8px_0_#989990]">
             <div className="flex justify-between px-2 items-stretch pr-0">
-              <div className="flex items-center py-2">
-                <Vector />
-                <a className="navBtn">Amey</a>
+              <div className="flex flex-col w-full">
+                <div className="flex justify-between">
+                  {/* logo  */}
+                  <div className="flex items-center py-2 ">
+                    <Vector />
+                    <a className="navBtn">Amey</a>
+                  </div>
+
+                  {/* hamburger icon  */}
+                  <div className="flex items-center mr-6">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="40"
+                      height="40"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="feather feather-menu lg:hidden"
+                      onClick={() => setIsOpen(!isOpen)}
+                    >
+                      <line
+                        x1="3"
+                        y1="6"
+                        x2="21"
+                        y2="6"
+                        className={twMerge(
+                          "origin-left transition",
+                          isOpen && "rotate-45 -translate-y-1"
+                        )}
+                      ></line>
+                      <line
+                        x1="3"
+                        y1="12"
+                        x2="21"
+                        y2="12"
+                        className={twMerge(isOpen && "hidden")}
+                      ></line>
+                      <line
+                        x1="3"
+                        y1="18"
+                        x2="21"
+                        y2="18"
+                        className={twMerge(
+                          "origin-left transition",
+                          isOpen && "-rotate-45 translate-y-1"
+                        )}
+                      ></line>
+                    </svg>
+                  </div>
+                </div>
+                <AnimatePresence>
+                  {isOpen && (
+                    <motion.div
+                      initial={{ height: 0 }}
+                      animate={{ height: "auto" }}
+                      exit={{ height: 0 }}
+                      className="overflow-hidden"
+                    >
+                      <div className="lg:hidden flex flex-col items-center gap-5 mt-5 mb-5">
+                        {navLinks.map((link, index) => {
+                          return (
+                            <a key={index} href={link.href}>
+                              {link.label}
+                            </a>
+                          );
+                        })}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 72 72"
-                width="64px"
-                height="64px"
-                className="lg:hidden"
-              >
-                <path d="M56 48c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 48 54.798 48 56 48zM56 32c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 32 54.798 32 56 32zM56 16c2.209 0 4 1.791 4 4 0 2.209-1.791 4-4 4-1.202 0-38.798 0-40 0-2.209 0-4-1.791-4-4 0-2.209 1.791-4 4-4C17.202 16 54.798 16 56 16z" />
-              </svg>
+
               <div className="hidden lg:flex">
                 {navLinks.map((link, index) => {
                   return (
@@ -39,7 +105,9 @@ const Navbar = () => {
                           key={index}
                           href={link.href}
                           className={
-                            link.label === "Portfolio" ? "yellowBg relative z-1" : ""
+                            link.label === "Portfolio"
+                              ? "yellowBg relative z-1"
+                              : ""
                           }
                         >
                           {link.label}
