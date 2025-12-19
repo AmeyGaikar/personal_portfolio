@@ -76,29 +76,9 @@
   @apply border-3 border-b-0 flex flex-col gap-3 px-3 py-6 md:col-span-2 md:border-l-0
 }
 
-.sketch-border {
-  position: relative;
+.yellowBg {
+  @apply after:absolute after:bg-[#FFDC58] after:w-[85%] after:h-[28%] after:-z-1 after:left-0 after:bottom-[25%]
 }
 
-.sketch-border::before,
-.sketch-border::after {
-  content: "";
-  position: absolute;
-  border: 3px solid #000;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  pointer-events: none;
-}
 
-/* First rectangle */
-.sketch-border::before {
-  transform: translate(-6px, -6px) rotate(-1deg);
-}
-
-/* Second rectangle */
-.sketch-border::after {
-  transform: translate(6px, 6px) rotate(1deg);
-}
 

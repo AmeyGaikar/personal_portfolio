@@ -15,7 +15,7 @@ const Navbar = () => {
         <PinkPatch className="hidden lg:block absolute -bottom-6 -left-20 -rotate-20" />
 
         <div className="flex justify-center">
-          <div className="border-4 my-5 bg-white w-80 lg:w-150 h-18">
+          <div className="border-4 my-5 bg-white w-80 lg:w-150 h-18 shadow-[8px_8px_0_#989990]">
             <div className="flex justify-between px-2 items-stretch pr-0">
               <div className="flex items-center py-2">
                 <Vector />
@@ -35,7 +35,13 @@ const Navbar = () => {
                   return (
                     <div className="border-l-4 border-black px-5 flex items-center h-full">
                       {
-                        <a key={index} href={link.href}>
+                        <a
+                          key={index}
+                          href={link.href}
+                          className={
+                            link.label === "Portfolio" ? "yellowBg relative z-1" : ""
+                          }
+                        >
                           {link.label}
                         </a>
                       }
@@ -47,7 +53,7 @@ const Navbar = () => {
           </div>
         </div>
 
-        <div className="hidden lg:block border-3 mt-8" ></div>
+        <div className="hidden lg:block border-3 mt-8"></div>
       </div>
     </>
   );
