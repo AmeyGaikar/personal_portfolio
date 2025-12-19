@@ -57,7 +57,7 @@
 }
 
 .fifthDiv{
-  @apply border-3 border-b-0 flex flex-col gap-3 px-3 py-10 md:col-span-2 md:col-start-5 md:row-span-2 md:row-start-1 md:border-l-0
+  @apply border-3 border-b-0 flex flex-col gap-3 px-3 pt-4 md:col-span-2 md:col-start-5 md:row-span-2 md:row-start-1 md:border-l-0
 }
 
 .fourthDiv {
@@ -65,7 +65,7 @@
 }
 
 .thirdDiv {
-  @apply border-3 border-b-0 flex flex-col gap-3 px-3 py-10  md:col-span-2 md:col-start-3 md:row-start-1 md:row-span-2 md:border-l-0
+  @apply border-3 border-b-0 flex flex-col gap-3 px-3 pt-4 md:col-span-2 md:col-start-3 md:row-start-1 md:row-span-2 md:border-l-0
 }
 
 .secondDiv {
