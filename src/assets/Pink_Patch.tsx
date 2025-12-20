@@ -1,8 +1,9 @@
+
 interface classNameProps {
-  className?: string
+  className?: string;
 }
 
-const PinkPatch = ({className} : classNameProps) => {
+const PinkPatch = ({ className }: classNameProps) => {
   return (
     <svg
       width="151"
@@ -63,5 +64,4 @@ const PinkPatch = ({className} : classNameProps) => {
   );
 };
 
-
-export default PinkPatch
+export default PinkPatch;
