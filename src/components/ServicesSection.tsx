@@ -23,11 +23,11 @@ const ServicesSection = () => {
         <PinkPatch className="absolute size-30  -right-15 -top-14"/>  
 
         <div className="firstDiv">
-          <p className="title">10</p> <p className="subtitle">Projects</p>
+          <p className="title">10+</p> <p className="subtitle">Projects</p>
         </div>
 
         <div className="secondDiv">
-          <p className="title">100K+</p> <p className="subtitle">generated</p>
+          <p className="title">8+</p> <p className="subtitle">technologies</p>
         </div>
 
         <div className="thirdDiv">
