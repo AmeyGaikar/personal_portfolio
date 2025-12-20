@@ -11,11 +11,11 @@ const Hero = () => {
       <div className="flex justify-center lg:px-10 mb-20  ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-36 md:gap-10 w-7xl">
           {/* first grid element  */}
-          <div className="flex justify-center md:justify-end w-full max-w-81 ml-auto lg:max-w-max">
-            <div className="flex flex-col items-start">
+          <div className="flex justify-center md:justify-end w-full max-w-81 mx-auto lg:max-w-max">
+            <div className="flex flex-col items-center">
               {/* pink patch  */}
               <PinkSmily />
-              <p className="text-4xl md:text-5xl lg:text-7xl font-semibold text-left">
+              <p className="text-4xl md:text-5xl lg:text-7xl font-semibold text-center">
                 I design ✍️ top notch <span className="yellowBg relative z-1">websites</span>
               </p>
               <FancyButton>
