@@ -4,6 +4,7 @@
 @layer base {
   html {
     font-family: "Space Grotesk", sans-serif;
+    overflow-x: hidden;
   }
 
   body {
