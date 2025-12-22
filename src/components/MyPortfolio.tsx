@@ -10,13 +10,15 @@ const MyPortfolio = () => {
       id: 0,
       image: GameHub,
       title: "Game hub",
-      subtitLe: "Discover new and upcoming games",
+      subtitle: "Discover new and upcoming games",
+      link: "https://game-hub-three-eta-83.vercel.app/",
     },
     {
       id: 1,
       image: SassPage,
       title: "Sass Landing Page",
-      subtitLe: "Discover new and upcoming games",
+      subtitle: "Discover new and upcoming games",
+      link: "https://sass-landing-page-pi.vercel.app/",
     },
   ];
 
@@ -36,18 +38,21 @@ const MyPortfolio = () => {
               className="border-3 bg-[#FFFFFF] px-3 h-[316px] lg:h-[457px] lg:w-[457px] w-[316px] flex flex-col justify-evenly gap-2 mx-auto"
               key={p.id}
             >
-
-              <img
-                src={p.image}
-                className="w-full h-auto object-bottom border-3 p-2 bg-[#C0C0C0]"
-                alt={p.image + "image"}
-              />
+              <a href={p.link}>
+                <img
+                  src={p.image}
+                  className="w-full h-auto object-bottom border-3 p-2 bg-[#C0C0C0]"
+                  alt={p.image + "image"}
+                />
+              </a>
               <div className="flex gap-3 justify-between">
                 <div className="max-w-[83%]">
                   <p className="font-semibold text-xl lg:text-3xl">{p.title}</p>
-                  <p className="font-medium">{p.subtitLe}</p>
+                  <p className="font-medium">{p.subtitle}</p>
                 </div>
-                <LinkArrow />
+                <a href={p.link}>
+                  <LinkArrow />
+                </a>
               </div>
             </div>
           );
