@@ -16,10 +16,17 @@ const Hero = () => {
               {/* pink patch  */}
               <PinkSmily />
               <p className="text-4xl md:text-5xl lg:text-7xl font-semibold text-center">
-                I design ✍️ top notch <span className="yellowBg relative z-1">websites</span>
+                I design ✍️ top notch{" "}
+                <span className="yellowBg relative z-1">websites</span>
               </p>
               <FancyButton>
-                See portfolio
+                <a
+                  href="https://mail.google.com/mail/?view=cm&to=ameygaikar14@gmail.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Hire me
+                </a>
               </FancyButton>
             </div>
           </div>
@@ -36,7 +43,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-      <PinkPatch className="relative size-23 right-8 top-6"/>
+      <PinkPatch className="relative size-23 right-8 top-6" />
     </>
   );
 };

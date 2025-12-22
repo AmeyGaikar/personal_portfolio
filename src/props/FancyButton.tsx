@@ -1,11 +1,13 @@
-const FancyButton = ({ children }: { children: string }) => {
+import type { ReactNode } from "react";
+
+const FancyButton = ({ children }: { children: ReactNode }) => {
   return (
     <div className="relative">
       <button className=" bg-[#BAE6FF] p-2 border-4 rounded-full font-semibold">
         {children}
       </button>
       {/* black spark */}
-      <div className=" absolute left-25 top-8 rotate-20">
+      <div className=" absolute left-19 top-8 rotate-20">
         <svg
           width="41"
           height="48"

@@ -8,7 +8,10 @@ const Navbar = () => {
   const navLinks = [
     { label: "About //", href: "#" },
     { label: "Portfolio", href: "#" },
-    { label: "Hire me", href: "#" },
+    {
+      label: "Hire me",
+      href: "https://mail.google.com/mail/?view=cm&to=ameygaikar14@gmail.com",
+    },
   ];
 
   const [isOpen, setIsOpen] = useState(false);
@@ -17,7 +20,6 @@ const Navbar = () => {
       <div className="relative w-full md:mb-27 ">
         <PinkPatch className="hidden lg:block absolute -top-6 -right-15 -rotate-10" />
         <PinkPatch className="hidden lg:block absolute -bottom-6 -left-20 -rotate-20" />
-
         <div className="flex justify-center">
           <div className="border-4 my-5 bg-white w-80 lg:w-150 h-auto shadow-[8px_8px_0_#989990]">
             <div className="flex justify-between px-2 items-stretch pr-0">
@@ -85,7 +87,12 @@ const Navbar = () => {
                       <div className="lg:hidden flex flex-col items-center gap-5 mt-5 mb-5">
                         {navLinks.map((link, index) => {
                           return (
-                            <a key={index} href={link.href}>
+                            <a
+                              key={index}
+                              href={link.href}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
                               {link.label}
                             </a>
                           );
